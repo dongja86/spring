@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+	<!-- 
+		* root-context.xml
+		서버 구동과 동시에 web.xml파일을 거쳐서 바로 로딩되는 문서 == preloaing
+		=> 서버구동과 동시에 바로 세팅(Bean등록)해야하는 내용들을 작성
+		주로 DB접속정보, 트랜잭션 처리, 외부모듈연결 등등 
+	
+	
+	 -->		
+	 
+	<bean class="org.apache.commons.dbcp.BasicDataSource" id="dataSource" destroy-method="close">
+		<!-- 어떤 DB에 접속할건지 정보 작성 / 해당 클래스 필드에 어떤 값을 넣어줄 지 작성-->
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+		<property name="username" value="SPRING"/>
+		<property name="password" value="SPRING"/>
+	</bean>	 
+		
+	<!-- 
+		객체가 필요할 때 마다 내부적으로 실행되는 코드
+		BasicDataSource dataSource = new BasicDataSource();
+		dateSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+		dateSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+		dateSource.setUsername("SPRING");
+		dateSource.setPassword("SPRING");
+	 -->	
+	
+	<!-- 2단계. MyBatisSpring에서 제공하는 SQL명령을 실행하기 위한 Bean 등록  -->
+	
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
+		<!-- MyBatis설정파일의 위치를 지정해서 설정값들을 가져와야함 / 해당 클래스의 필드에 값을 넣어줌  -->
+		<property name="configLocation" value=""/>
+		
+	</bean>
+		
+		
+		
+		
+		
+		
+		
+</beans>

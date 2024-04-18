@@ -1,0 +1,6 @@
+package com.kh.spring.member.model.dao;
+
+@Repository
+public class MemberRepository {
+
+}

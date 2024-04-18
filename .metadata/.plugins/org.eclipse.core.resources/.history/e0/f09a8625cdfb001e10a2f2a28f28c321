@@ -1,0 +1,8 @@
+package com.kh.spring.member.model.dao;
+
+import org.springframework.stereotype.Repository;
+
+@Repository // 저장소 관련된 작업(영속을)을 처리하겠다는 뜻
+public class MemberRepository {
+
+}

@@ -1,0 +1,45 @@
+package com.kh.spring.member.model.service;
+
+import org.springframework.stereotype.Service;
+
+import com.kh.spring.member.model.vo.Member;
+
+// @Component == Bean으로 등록하겠다.
+@Service // Component보다 더 구체적으로 ServiceBean으로 등록하겠다.
+public class MemberServiceImpl implements MemberService {
+	
+	private MemberRepository memberRepository;
+
+	@Override
+	public Member login(Member member) {
+		//System.out.println("로그인~~");
+		
+		
+		return null;
+	}//
+	
+
+	@Override
+	public int insert(Member member) {
+		
+		return 0;
+	}//
+	
+
+	@Override
+	public int update(Member member) {
+		
+		return 0;
+	}//
+	
+
+	@Override
+	public int delete(Member member) {
+		
+		return 0;
+	}//
+	
+
+	
+	
+}
