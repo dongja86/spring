@@ -9,7 +9,6 @@
 			상단 : 프로젝트의 정보
 			<properties>
 			[<repositories(현재는 없음)>]
-			
 			<dependencies>
 			<bulid>
 		</project>
