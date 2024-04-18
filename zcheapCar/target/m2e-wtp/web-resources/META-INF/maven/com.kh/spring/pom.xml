@@ -20,7 +20,6 @@
 		groupId : 2번째 레벨까지의 패키지구조
 		artifactId : 3번째 레벨 패키지(즉, contextRoot명)
 		packaging : 배포할 때 압축형식 war(jar는 그냥 java클래스파일 압축, web 어플리케이션 압축 war)
-	
 	 -->
 	
    <!--  프로젝트 정보       -->	
